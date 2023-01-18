@@ -128,7 +128,7 @@ class NoteDetailState extends State<NoteDetail> {
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,
+                            backgroundColor: Colors.green,
                             padding: const EdgeInsets.all(8.0),
                           ),
                           onPressed: () {
@@ -229,7 +229,7 @@ class NoteDetailState extends State<NoteDetail> {
 
   void movetoLastScreen() async {
     Navigator.pop(context, true);
-
+    print(note.id);
     note.date = DateFormat.yMMMd().format(DateTime.now());
     int result;
     if (note.id != null) {
