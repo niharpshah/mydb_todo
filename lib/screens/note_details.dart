@@ -29,7 +29,7 @@ class NoteDetailState extends State<NoteDetail> {
   Widget build(BuildContext context) {
     TextStyle? textStyle = Theme.of(context).textTheme.titleMedium;
     titleController.text = note.title;
-    descriptionController.text = note.description!;
+    descriptionController.text = note.description ?? "";
 
     return WillPopScope(
       onWillPop: () async {
